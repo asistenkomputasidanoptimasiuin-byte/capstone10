@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block title %}Database - Smart Pond{% endblock %}
+
+{% block content %}
+<div class="container">
+    <header class="page-header">
+        <h1>Database</h1>
+        <p>Welcome to btabtabtabtabtab</p>
+    </header>
+
+    <div class="database-controls">
+        <div class="filter-section">
+            <div class="filter-group">
+                <label for="date-filter">Filter Tanggal:</label>
+                <input type="date" id="date-filter" class="filter-input">
+            </div>
+            <div class="filter-group">
+                <label for="sensor-filter">Filter Sensor:</label>
+                <select id="sensor-filter" class="filter-input">
+                    <option value="all">Semua Sensor</option>
+                    <option value="ph">PH</option>
+                    <option value="kekeruhan">Kekeruhan</option>
+                    <option value="tds">TDS</option>
+                    <option value="suhu">Suhu</option>
+                    <option value="water_level">Water Level</option>
+                </select>
+            </div>
+            <button id="export-btn" class="export-button">
+                📊 Export Data
+            </button>
+        </div>
+    </div>
+
+    <div class="database-stats">
+        <div class="stat-card">
+            <div class="stat-value" id="total-records">0</div>
+            <div class="stat-label">Total Data</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value" id="avg-ph">0</div>
+            <div class="stat-label">Rata-rata PH</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value" id="avg-suhu">0</div>
+            <div class="stat-label">Rata-rata Suhu</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value" id="data-today">0</div>
+            <div class="stat-label">Data Hari Ini</div>
+        </div>
+    </div>
+
+    <div class="database-content">
+        <div class="table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>PH</th>
+                        <th>Kekeruhan (NTU)</th>
+                        <th>TDS (ppm)</th>
+                        <th>Suhu (°C)</th>
+                        <th>Water Level (cm)</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="data-table-body">
+                    <!-- Data akan diisi oleh JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pagination">
+            <button id="prev-btn" class="page-btn">← Previous</button>
+            <span id="page-info" class="page-info">Page 1 of 1</span>
+            <button id="next-btn" class="page-btn">Next →</button>
+        </div>
+    </div>
+
+    <div class="charts-section">
+        <h3>Grafik Data Sensor</h3>
+        <div class="charts-grid">
+            <div class="chart-container">
+                <canvas id="ph-chart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="temperature-chart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="kekeruhan-chart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="water-level-chart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

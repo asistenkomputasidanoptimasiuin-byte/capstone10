@@ -1,0 +1,199 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Smart Pond{% endblock %}
+
+{% block content %}
+<div class="home-container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Selamat Datang di <span class="highlight">Smart Pond</span></h1>
+                <p class="hero-subtitle">Sistem monitoring kolam ikan koi terintegrasi berbasis IoT untuk budidaya yang lebih efisien dan modern</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Real-time Monitoring</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Parameter Sensor</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Automation</div>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <a href="{{ url_for('dashboard') }}" class="cta-button primary">
+                        Lihat Dashboard
+                    </a>
+                    <a href="#about" class="cta-button secondary">
+                        Pelajari Lebih Lanjut
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image">
+                    <img src="{{ url_for('static', filename='images/hero-pond.jpg') }}" alt="Smart Pond System" class="hero-img">
+                    <div class="image-overlay">
+                        <div class="overlay-text">
+                            <h4>Smart Pond System</h4>
+                            <p>Kolam ikan koi terintegrasi IoT</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="section-header">
+            <h2>Tentang Smart Pond</h2>
+            <p>Inovasi teknologi untuk revolusi budidaya ikan koi modern</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Mengapa Smart Pond?</h3>
+                <p>Smart Pond adalah solusi terintegrasi yang dikembangkan oleh Tim Capstone 10 untuk mengatasi permasalahan budidaya ikan koi tradisional. Sistem ini menggabungkan monitoring kualitas air, pemberian pakan otomatis, dan sistem filtrasi dalam satu platform.</p>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✅</span>
+                        <div>
+                            <strong>Efisiensi Waktu</strong>
+                            <p>Otomatisasi mengurangi kebutuhan monitoring manual</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✅</span>
+                        <div>
+                            <strong>Kualitas Air Optimal</strong>
+                            <p>Parameter air selalu dalam kondisi ideal untuk ikan koi</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✅</span>
+                        <div>
+                            <strong>Data-driven Decision</strong>
+                            <p>Keputusan berdasarkan data real-time yang akurat</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✅</span>
+                        <div>
+                            <strong>Cost Effective</strong>
+                            <p>Mengurangi pemborosan pakan dan air</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-visual">
+                <div class="system-diagram">
+                    <div class="diagram-title">
+                        <h4>Arsitektur Sistem Smart Pond</h4>
+                    </div>
+                    <div class="diagram-flow">
+                        <div class="flow-item">
+                            <div class="flow-icon">📡</div>
+                            <span>Sensor</span>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-item">
+                            <div class="flow-icon">💻</div>
+                            <span>Controller</span>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-item">
+                            <div class="flow-icon">☁️</div>
+                            <span>Cloud</span>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-item">
+                            <div class="flow-icon">📱</div>
+                            <span>Dashboard</span>
+                        </div>
+                    </div>
+                    <div class="diagram-image">
+                        <img src="{{ url_for('static', filename='images/feature-sensor.jpg') }}" alt="System Architecture" class="diagram-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zakurai Koi Farm Section -->
+    <section class="partnership-section">
+        <div class="partnership-content">
+            <div class="partnership-text">
+                <h2>Bersama Zakurai Koi Farm</h2>
+                <p class="partner-subtitle">Kolaborasi inovasi teknologi dengan ahli budidaya ikan koi profesional</p>
+                
+                <div class="partner-info">
+                    <div class="info-item">
+                        <strong>Lokasi:</strong>
+                        <span>Jl. Cikal Dempet, Kayen, Condongcatur, Sleman, Yogyakarta</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Spesialisasi:</strong>
+                        <span>Budidaya ikan koi lokal dan impor Jepang</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Pengalaman:</strong>
+                        <span>Ahli dalam pemeliharaan koi berkualitas tinggi</span>
+                    </div>
+                </div>
+                
+                <p>Zakurai Koi Farm merupakan mitra utama dalam pengembangan Smart Pond, menyediakan expertise dan lingkungan testing yang ideal untuk sistem kami.</p>
+                
+                <div class="achievement-badges">
+                    <div class="badge">🏆 Koi Quality Standard</div>
+                    <div class="badge">🌱 Sustainable Practice</div>
+                    <div class="badge">🔬 Research Partner</div>
+                </div>
+            </div>
+            <div class="partnership-visual">
+                <div class="farm-visual">
+                    <div class="farm-image">
+                        <img src="{{ url_for('static', filename='images/zakurai-farm.jpg') }}" alt="Zakurai Koi Farm" class="farm-img">
+                        <div class="farm-overlay">
+                            <h4>Zakurai Koi Farm</h4>
+                            <p>Yogyakarta</p>
+                        </div>
+                    </div>
+                    <div class="farm-stats">
+                        <div class="farm-stat">
+                            <div class="stat-value">50+</div>
+                            <div class="stat-label">Kolam Aktif</div>
+                        </div>
+                        <div class="farm-stat">
+                            <div class="stat-value">1000+</div>
+                            <div class="stat-label">Ikan Koi</div>
+                        </div>
+                        <div class="farm-stat">
+                            <div class="stat-value">5+</div>
+                            <div class="stat-label">Tahun Pengalaman</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Siap Mengoptimalkan Budidaya Ikan Koi Anda?</h2>
+            <p>Bergabunglah dengan revolusi budidaya modern dengan Smart Pond</p>
+            <div class="cta-actions">
+                <a href="{{ url_for('contact') }}" class="cta-button primary large">
+                    📞 Hubungi Kami
+                </a>
+                <a href="{{ url_for('dashboard') }}" class="cta-button secondary large">
+                    📊 Demo Dashboard
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

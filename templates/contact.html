@@ -1,0 +1,300 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - Smart Pond{% endblock %}
+
+{% block content %}
+<div class="contact-container">
+    <!-- Header Section -->
+    <section class="contact-header">
+        <div class="header-content">
+            <h1 class="contact-title">Hubungi Kami</h1>
+            <p class="contact-subtitle">Tim Capstone 10 siap membantu Anda dalam implementasi sistem Smart Pond</p>
+            <div class="contact-description">
+                <p>Untuk informasi lebih lanjut tentang project Smart Pond, kolaborasi, atau pertanyaan teknis, jangan ragu untuk menghubungi kami melalui kontak di bawah ini.</p>
+            </div>
+        </div>
+        <div class="header-graphic">
+            <div class="contact-visual">
+                <img src="{{ url_for('static', filename='images/hero-pond.jpg') }}" alt="Contact Smart Pond" class="contact-hero-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Cards Section -->
+    <section class="contact-cards-section">
+        <div class="section-header">
+            <h2>Kontak Langsung</h2>
+            <p>Pilih metode kontak yang paling nyaman untuk Anda</p>
+        </div>
+        <div class="contact-cards-grid">
+            <div class="contact-card primary">
+                <div class="card-header">
+                    <div class="contact-avatar">
+                        <img src="{{ url_for('static', filename='images/project-owner.jpg') }}" alt="Bapak Eko" class="avatar-img">
+                    </div>
+                    <div class="contact-info-main">
+                        <h3>Bapak Eko Listyo Wibowo</h3>
+                        <p class="contact-role">Project Owner & Pemilik Zakurai Koi Farm</p>
+                    </div>
+                </div>
+                <div class="contact-details">
+                    <div class="detail-item">
+                        <span class="detail-icon">📞</span>
+                        <a href="tel:+6285745892363" class="detail-value link">+62 857-4589-2363</a>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon">💼</span>
+                        <span class="detail-value">Pemilik Zakurai Koi Farm</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon">📍</span>
+                        <span class="detail-value">Yogyakarta</span>
+                    </div>
+                </div>
+                <div class="contact-actions">
+                    <button class="contact-action primary" onclick="window.location.href='tel:+6285745892363'">
+                        📞 Telepon Sekarang
+                    </button>
+                    <button class="contact-action secondary" onclick="window.open('https://wa.me/6285745892363', '_blank')">
+                        💬 WhatsApp
+                    </button>
+                </div>
+            </div>
+
+            <div class="contact-card secondary">
+                <div class="card-header">
+                    <div class="contact-avatar team">
+                        <div class="team-avatar">👥</div>
+                    </div>
+                    <div class="contact-info-main">
+                        <h3>Tim Capstone 10</h3>
+                        <p class="contact-role">Pengembang Sistem Smart Pond</p>
+                    </div>
+                </div>
+                <div class="contact-details">
+                    <div class="detail-item">
+                        <span class="detail-icon">📧</span>
+                        <a href="mailto:capstone10@gmail.com" class="detail-value link">capstone10@gmail.com</a>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon">🎓</span>
+                        <span class="detail-value">Teknik Industri</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon">🔧</span>
+                        <span class="detail-value">UIN Sunan Kalijaga</span>
+                    </div>
+                </div>
+                <div class="contact-actions">
+                    <button class="contact-action primary" onclick="window.location.href='mailto:capstone10@gmail.com'">
+                        📧 Kirim Email
+                    </button>
+                    <button class="contact-action secondary" onclick="showTeamDetails()">
+                        👨‍💻 Lihat Tim
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="section-header">
+            <h2>Tim Pengembang</h2>
+            <p>Dibangun oleh mahasiswa berdedikasi dari Program Capstone</p>
+        </div>
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="member-avatar">
+                    <img src="{{ url_for('static', filename='images/team-solihin.jpg') }}" alt="Muhammad Solihin" class="avatar-img">
+                </div>
+                <h4>Muhammad Solihin</h4>
+                <p class="member-role">Project Manager</p>
+                <p class="member-nim">NIM: 22106060038</p>
+                <div class="member-skills">
+                    <span class="skill-tag">Leadership</span>
+                    <span class="skill-tag">Planning</span>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="member-avatar">
+                    <img src="{{ url_for('static', filename='images/team-evan.jpg') }}" alt="Evan Raditya A.A" class="avatar-img">
+                </div>
+                <h4>Evan Raditya A.A</h4>
+                <p class="member-role">Hardware Specialist</p>
+                <p class="member-nim">NIM: 22106060023</p>
+                <div class="member-skills">
+                    <span class="skill-tag">Electronics</span>
+                    <span class="skill-tag">IoT</span>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="member-avatar">
+                    <img src="{{ url_for('static', filename='images/team-khilya.jpg') }}" alt="Khilya Nur Khadzlaqoh" class="avatar-img">
+                </div>
+                <h4>Khilya Nur Khadzlaqoh</h4>
+                <p class="member-role">Software Developer</p>
+                <p class="member-nim">NIM: 22106060016</p>
+                <div class="member-skills">
+                    <span class="skill-tag">Programming</span>
+                    <span class="skill-tag">Backend</span>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="member-avatar">
+                    <img src="{{ url_for('static', filename='images/team-falkur.jpg') }}" alt="Falkur Rohman" class="avatar-img">
+                </div>
+                <h4>Faikur Rohman</h4>
+                <p class="member-role">System Integrator</p>
+                <p class="member-nim">NIM: 22106060056</p>
+                <div class="member-skills">
+                    <span class="skill-tag">Integration</span>
+                    <span class="skill-tag">Testing</span>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="member-avatar">
+                    <img src="{{ url_for('static', filename='images/team-hilman.jpg') }}" alt="Hilman Nojib Pratama" class="avatar-img">
+                </div>
+                <h4>Hilman Najib Pratama</h4>
+                <p class="member-role">Research & Documentation</p>
+                <p class="member-nim">NIM: 22106060074</p>
+                <div class="member-skills">
+                    <span class="skill-tag">Research</span>
+                    <span class="skill-tag">Documentation</span>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="member-avatar">
+                    <img src="{{ url_for('static', filename='images/team-nisrina.jpg') }}" alt="Nisrina Indy Saqifa" class="avatar-img">
+                </div>
+                <h4>Nisrina Indy Saqifa</h4>
+                <p class="member-role">UI/UX Designer</p>
+                <p class="member-nim">NIM: 22106060079</p>
+                <div class="member-skills">
+                    <span class="skill-tag">Design</span>
+                    <span class="skill-tag">UX Research</span>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="member-avatar">
+                    <img src="{{ url_for('static', filename='images/team-aqza.jpg') }}" alt="Zahra Aulia Aqza" class="avatar-img">
+                </div>
+                <h4>Zahra Aulia Aqza</h4>
+                <p class="member-role">Quality Assurance</p>
+                <p class="member-nim">NIM: 22106060050</p>
+                <div class="member-skills">
+                    <span class="skill-tag">Testing</span>
+                    <span class="skill-tag">Quality</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map & Location Section -->
+    <section class="location-section">
+        <div class="section-header">
+            <h2>Lokasi Kami</h2>
+            <p>Kunjungi Zakurai Koi Farm untuk melihat langsung implementasi Smart Pond</p>
+        </div>
+        <div class="location-content">
+            <div class="location-info">
+                <div class="info-card">
+                    <div class="location-image">
+                        <img src="{{ url_for('static', filename='images/farm-location.jpg') }}" alt="Zakurai Koi Farm Location" class="location-img">
+                    </div>
+                    <h3>Zakurai Koi Farm</h3>
+                    <div class="address-details">
+                        <div class="address-item">
+                            <span class="address-icon">📍</span>
+                            <div>
+                                <strong>Alamat Lengkap</strong>
+                                <p>Jl. Cikal Dempet, Kayen, Condongcatur<br>Kecamatan Depok, Kabupaten Sleman<br>Daerah Istimewa Yogyakarta</p>
+                            </div>
+                        </div>
+                        <div class="address-item">
+                            <span class="address-icon">⏰</span>
+                            <div>
+                                <strong>Jam Operasional</strong>
+                                <p>Senin - Minggu: 08:00 - 17:00 WIB</p>
+                            </div>
+                        </div>
+                        <div class="address-item">
+                            <span class="address-icon">💼</span>
+                            <div>
+                                <strong>Bidang Usaha</strong>
+                                <p>Budidaya dan penjualan ikan koi<br>Konsultasi pemeliharaan koi<br>Pengembangan sistem akuakultur</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="location-actions">
+                        <button class="action-btn primary" onclick="window.open('https://maps.google.com/?q=Zakurai+Koi+Farm+Yogyakarta', '_blank')">
+                            🗺️ Buka di Google Maps
+                        </button>
+                        <button class="action-btn secondary" onclick="window.open('https://wa.me/6285745892363?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20Smart%20Pond', '_blank')">
+                            💬 Chat via WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="location-map">
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.168283745614!2d110.36827727499947!3d-7.774858177208806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5835d26b23b7%3A0x620a972cfe0acb36!2sZakurai%20Koi%20Farm!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0; border-radius: 15px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Contact Form -->
+    <section class="contact-form-section">
+        <div class="form-container">
+            <div class="form-header">
+                <h2>Punya Pertanyaan?</h2>
+                <p>Kirim pesan langsung kepada kami melalui form berikut</p>
+            </div>
+            <form class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Nama Lengkap</label>
+                        <input type="text" id="name" placeholder="Masukkan nama Anda" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="nama@email.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subjek</label>
+                    <input type="text" id="subject" placeholder="Subjek pesan Anda" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan</label>
+                    <textarea id="message" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    📨 Kirim Pesan
+                </button>
+            </form>
+        </div>
+    </section>
+</div>
+
+<!-- Team Modal -->
+<div id="teamModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h3>Detail Tim Capstone 10</h3>
+        <div class="modal-team-grid">
+            <!-- Team details will be populated by JavaScript -->
+        </div>
+    </div>
+</div>
+{% endblock %}
